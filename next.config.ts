@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
   // CSS optimization
   experimental: {
     optimizeCss: true,
+    optimizePackageImports: ['framer-motion', 'react-slick', '@iconify/react'],
   },
 
   // Compiler options
@@ -20,7 +21,6 @@ const nextConfig: NextConfig = {
   // Production optimizations
   poweredByHeader: false,
   compress: true,
-  // optimizeFonts: true,
 
   // Image optimization
   images: {

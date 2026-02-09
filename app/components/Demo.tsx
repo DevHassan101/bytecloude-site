@@ -1,69 +1,193 @@
-export default function Demo() {
-  return (
-    <>
-      <section className="bg-pink-400 p-10">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni enim
-          possimus laborum non praesentium odio cum, facere mollitia voluptatem
-          tempora, aspernatur fuga, consequuntur quae atque totam alias saepe
-          illum magnam. Provident vitae libero deleniti, voluptatibus
-          exercitationem accusantium voluptates voluptate nihil aliquid totam
-          dolore quidem itaque ea quia sunt ipsam hic non. Dolore, excepturi
-          eveniet voluptatum dolorum nemo quos reiciendis rem consequatur odit
-          explicabo accusamus modi eaque molestias aspernatur laudantium?
-          Quaerat, non, culpa, ullam ducimus assumenda aliquid quod nulla ipsa
-          ea officiis ipsum nesciunt cumque nihil harum asperiores. Iusto,
-          possimus dolores. Velit odit consectetur sint assumenda reiciendis
-          recusandae, quaerat animi voluptates nesciunt distinctio autem quis
-          eius voluptate quod aperiam hic laudantium veniam! Odio ducimus
-          exercitationem doloribus quo ipsum blanditiis, necessitatibus
-          molestias magnam voluptatem quod velit maiores tempore ratione,
-          voluptatum dolorum totam aliquam. Fugit, officiis voluptatibus?
-          Eveniet labore velit id sapiente, dolorum molestias architecto
-          laboriosam dolores, deserunt veritatis, praesentium ut ab magnam.
-          Nihil enim distinctio est ea laudantium reiciendis nostrum quos
-          officia ex amet earum sed laboriosam repellendus suscipit, deserunt
-          quas placeat eos modi atque mollitia ducimus autem! Dolores iure
-          voluptates velit tempora! Labore, aspernatur? Temporibus, sit nisi?
-          Molestiae consectetur, autem ipsum expedita corrupti ratione porro
-          voluptas, est itaque aliquid eaque. Itaque vel at libero! Cupiditate
-          optio illum, amet placeat in consequuntur? Vel repellat rem natus unde
-          quis corporis, aut dolorum esse quia delectus? Libero, repellendus.
-          Corporis magnam nisi rem! Quisquam, pariatur nesciunt? Reiciendis
-          necessitatibus distinctio magnam optio a in quae dicta, harum ipsam
-          accusamus voluptatem voluptates deleniti id excepturi laborum, ex
-          minus fugit! Quidem, dolores ab tempora necessitatibus quasi dolor.
-          Nobis in perferendis eveniet, vel dignissimos nesciunt maiores
-          suscipit et maxime obcaecati expedita quam sed eligendi doloremque
-          modi consectetur molestiae harum accusamus, voluptatibus sunt illum
-          nam? Voluptatibus, natus. Hic dolorum rem reprehenderit perferendis.
-          Laudantium aut enim ipsa, atque blanditiis delectus perspiciatis
-          aliquid adipisci officia, dolorum repellat odit voluptas facere
-          assumenda ex similique in ullam alias laboriosam molestias asperiores
-          consequatur quas? Exercitationem eveniet quae fuga adipisci nobis
-          aliquid recusandae voluptate iusto amet cum eum nam quaerat,
-          perferendis magni voluptates, velit at rem! Aperiam consequatur minus
-          harum perspiciatis accusamus fugiat obcaecati labore. Nobis expedita
-          id voluptatibus reiciendis magnam eveniet ipsum culpa placeat fugit
-          officia quia, debitis tenetur! Vero ipsum laudantium id optio alias
-          perferendis architecto maiores totam impedit ducimus minima cumque
-          explicabo, ea obcaecati similique, repudiandae vitae commodi
-          reiciendis quaerat. Dolor fuga iusto suscipit ipsum ipsa commodi omnis
-          unde voluptatum perferendis praesentium quaerat veritatis expedita
-          quas laboriosam, voluptas aliquam itaque libero eligendi temporibus
-          minus? Repellat, eligendi totam vel maxime eveniet asperiores in culpa
-          fuga provident quam, voluptates eos nihil debitis quis beatae,
-          recusandae est architecto deserunt esse libero! Dolorem quidem beatae
-          velit asperiores placeat? Ullam, harum eos accusantium magnam commodi
-          natus nobis deleniti perferendis voluptatem sunt impedit ratione, est
-          qui quibusdam repudiandae asperiores, porro quam dolorum tenetur
-          corrupti. Fuga ducimus consequatur asperiores? Eveniet earum totam id
-          omnis, reprehenderit officia dignissimos exercitationem labore,
-          tenetur quaerat eaque in, quia ipsum perferendis rerum. Repellat,
-          nesciunt necessitatibus debitis nemo soluta quos veniam recusandae
-          eligendi quas optio obcaecati?
-        </p>
-      </section>
-    </>
-  );
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import dynamic from 'next/dynamic';
+import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
+
+// Lazy load Slider
+const Slider = dynamic(() => import('react-slick'), {
+  ssr: true,
+});
+
+interface SlideData {
+    id: number;
+    badge: string;
+    title: string;
+    highlight: string;
+    description: string;
+    mission: string;
+    primaryBtn: string;
+    secondaryBtn: string;
 }
+
+export default function HeroBanner() {
+    const [currentSlide, setCurrentSlide] = useState<number>(0);
+
+    const slides: SlideData[] = [
+        // ... your slides data
+    ];
+
+    const sliderSettings = {
+        dots: false,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: true,
+        fade: true,
+        arrows: false,
+        lazyLoad: 'ondemand' as const, // Add lazy loading
+        beforeChange: (current: number, next: number) => setCurrentSlide(next),
+    };
+
+    const containerVariants: Variants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
+                ease: "easeOut",
+                staggerChildren: 0.15,
+            },
+        },
+    };
+
+    const itemVariants: Variants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut",
+            },
+        },
+    };
+
+    const highlightVariants: Variants = {
+        hidden: { opacity: 0, scale: 0.9 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 0.5,
+                ease: "backOut",
+                delay: 0.2,
+            },
+        },
+    };
+
+    return (
+        <section className="hero-banner">
+            {/* Background SVG - Memoized */}
+            <BackgroundSVG />
+            
+            {/* Slider Content */}
+            <div className="w-full relative z-20 mt-15.5 md:mt-0">
+                <Slider {...sliderSettings}>
+                    {slides.map((slide, index) => (
+                        <SlideContent 
+                            key={slide.id}
+                            slide={slide}
+                            index={index}
+                            currentSlide={currentSlide}
+                            containerVariants={containerVariants}
+                            itemVariants={itemVariants}
+                            highlightVariants={highlightVariants}
+                        />
+                    ))}
+                </Slider>
+            </div>
+            
+            {/* Floating Icons */}
+            <FloatingIcons />
+        </section>
+    );
+}
+
+// Separate components for better code splitting
+const BackgroundSVG = () => (
+    <div className="overlay-banner" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice"
+            style={{ width: '100%', height: '100%', opacity: 0.3 }}>
+            {/* SVG content */}
+        </svg>
+    </div>
+);
+
+const SlideContent = ({ slide, index, currentSlide, containerVariants, itemVariants, highlightVariants }: any) => (
+    <div>
+        <motion.div 
+            className="hero-content w-full text-center px-5 md:px-10" 
+            variants={containerVariants}
+            initial="hidden" 
+            animate={currentSlide === index ? "visible" : "hidden"}
+        >
+            {/* Badge */}
+            <motion.div className="hero-title flex flex-col items-center" variants={itemVariants}>
+                <span className="border md:border-2 border-amber-400 px-5 py-1.25 md:px-6 md:py-2 text-[10px] md:text-sm rounded-full text-white uppercase">
+                    {slide.badge}
+                </span>
+                <h1 className="mt-3 md:mt-6 text-[23px] md:text-4xl lg:text-5xl xl:text-[55px] font-semibold text-white">
+                    {slide.title}
+                    <motion.span className="ml-1 text-amber-400" variants={highlightVariants}>
+                        {slide.highlight}
+                    </motion.span>
+                </h1>
+            </motion.div>
+            
+            {/* Description */}
+            <motion.div className="hero-desc mt-3 md:mt-5 max-w-3xl mx-auto px-4 md:px-8 text-center" variants={itemVariants}>
+                <p className="pb-3 text-[13px] sm:text-sm md:text-base lg:text-lg text-white/90 leading-relaxed">
+                    {slide.description}
+                </p>
+                <p className="pb-2 text-[13px] sm:text-sm md:text-base lg:text-lg text-white/90 leading-relaxed">
+                    {slide.mission}
+                </p>
+            </motion.div>
+            
+            {/* CTA Buttons */}
+            <motion.div className="hero-btns mt-5 mb-5 flex flex-row gap-3 md:gap-2 justify-center items-center" variants={itemVariants}>
+                <motion.button 
+                    className="py-2.5 px-7 md:py-4 md:px-12 btn1 dark-btn text-[11px] md:text-sm uppercase rounded-full"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    tabIndex={currentSlide === index ? 0 : -1}
+                    aria-label={slide.primaryBtn}
+                >
+                    {slide.primaryBtn}
+                </motion.button>
+                <motion.button 
+                    className="py-2.5 px-7 md:py-4 md:px-12 btn2 light-btn text-[11px] md:text-sm uppercase rounded-full"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    tabIndex={currentSlide === index ? 0 : -1}
+                    aria-label={slide.secondaryBtn}
+                >
+                    {slide.secondaryBtn}
+                </motion.button>
+            </motion.div>
+        </motion.div>
+    </div>
+);
+
+const FloatingIcons = () => (
+    <div className="content-overlay" aria-hidden="true">
+        <div className="content-icons">
+            <div className="content-left">
+                <span className="span1 -translate-y-8 translate-x-12">
+                    <Image src="/images/6.png" alt="" width={35} height={35} loading="lazy" />
+                </span>
+                {/* ... other icons */}
+            </div>
+            <div className="content-right">
+                {/* ... icons */}
+            </div>
+        </div>
+    </div>
+);

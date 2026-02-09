@@ -1,5 +1,5 @@
 import AboutUs from "./components/AboutUs";
-import HeroBanner from "./components/HeroBanner";
+// import HeroBanner from "./components/HeroBanner";
 import OurServices from "./components/OurServices";
 import StatsSection from "./components/StatsSection";
 import dynamic from 'next/dynamic';
@@ -11,6 +11,11 @@ const OurPortfolio = dynamic(() => import('./components/OurPortfolio'), {
 
 const OurTestimonials = dynamic(() => import('./components/OurTestimoinals'), {
   loading: () => <div>Loading...</div>,
+  ssr: true,
+});
+
+const HeroBanner = dynamic(() => import('./components/HeroBanner'), {
+  loading: () => <div className="h-screen bg-linear-to-br from-blue-600 to-blue-800 animate-pulse"></div>,
   ssr: true,
 });
 

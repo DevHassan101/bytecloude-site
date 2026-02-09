@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 interface SlideData {
     id: number;
