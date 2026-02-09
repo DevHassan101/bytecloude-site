@@ -70,7 +70,7 @@ export default function AboutUs() {
                         <div className="about-desc mt-3 md:mt-5">
                             <p className="text-justify tracking-tight md:tracking-normal md:text-left pr-3 md:pr-0 max-w-xl text-white/80 text-[15px] md:text-lg">Our mission is to empower startups and enterprises with innovative the solutions
                                 that boost online visibility, enhance lead generation and drive measurable growth in today's digital world.</p>
-                            <div className="about-info grid grid-cols-2 gap-y-8 gap-x-4 mt-7 md:mt-12">
+                            <div className="about-info grid grid-cols-2 gap-y-8 gap-x-4 mt-7 md:mt-10">
                                 {[
                                     { id: 2, label: "Experience Team", icon: "fluent:people-community-48-filled" },
                                     { id: 1, label: "Proven Results", icon: "mingcute:target-fill" },
@@ -91,7 +91,7 @@ export default function AboutUs() {
                                     </div>
                                 ))}
                             </div>
-                            <div className="about-bars w-full md:max-w-120 space-y-8 md:space-y-10 mt-7 md:mt-12">
+                            <div className="about-bars w-full md:max-w-120 space-y-8 md:space-y-10 mt-7 md:mt-10">
                                 {skillData.map((skill, index) => (
                                     <div key={index} className="group">
                                         <div className="flex justify-between items-end mb-2 md:mb-3">
@@ -111,7 +111,7 @@ export default function AboutUs() {
                                     </div>
                                 ))}
                             </div>
-                            <div className="about-btn mt-9 md:mt-14">
+                            <div className="about-btn mt-9 md:mt-13">
                                 <div className="flex justify-start items-center">
                                     <button className="group/btn relative flex items-center gap-3 bg-linear-to-br from-[#3bbbfc] to-[#01a8fc] p-1 pr-5 md:pr-10 rounded-full transition-all duration-500 shadow-[0_10px_20px_rgba(1,168,252,0.3)] hover:shadow-[0_0_30px_rgba(59,187,252,0.6),0_0_60px_rgba(59,187,252,0.3)] active:scale-95 hover:bg-position-[100%_0] animate-gradient-slow">
                                         <div className="bg-white w-8.75 h-8.75 md:w-12 md:h-12 rounded-full flex justify-center items-center transition-all duration-300 group-hover/btn:-rotate-45 group-hover/btn:scale-110 shadow-sm">
