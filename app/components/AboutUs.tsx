@@ -78,24 +78,13 @@ export default function AboutUs() {
                                     { id: 4, label: "Award Winnings", icon: "basil:award-solid" },
                                 ].map((item) => (
                                     <div key={item.id} className="flex items-center group cursor-default">
-                                        {/* Icon Orb with Neon Glow */}
                                         <div className="relative flex items-center justify-center w-8.5 h-8.5 md:w-12 md:h-12 shrink-0 mr-3 md:mr-4 rounded-full bg-linear-to-br from-[#3bbbfc] to-[#01a8fc] shadow-[0_0_15px_rgba(59,188,252,0.4)] transition-all duration-300 group-hover:scale-110 group-hover:shadow-[#3bbbfc]/70 group-hover:rotate-6">
-
-                                            {/* Glass reflection layer */}
                                             <div className="absolute inset-0.5 rounded-full border-t border-white/40 bg-white/5 opacity-40"></div>
-
-                                            {/* Icon */}
                                             <div className="relative z-10 text-white drop-shadow-md">
-                                                <Icon
-                                                    icon={item.icon}
-                                                    className="w-4 h-4 md:w-5.5 md:h-5.5"
-                                                />
+                                                <Icon icon={item.icon} className="w-4 h-4 md:w-5.5 md:h-5.5"/>
                                             </div>
-
-                                            {/* Outer Glow Ring */}
                                             <div className="absolute inset-0 rounded-full border border-white/20 scale-110 opacity-100 group-hover:opacity-100 transition-all duration-500"></div>
                                         </div>
-                                        {/* Label */}
                                         <small className="text-[12px] md:text-[16px] text-white/85 font-medium tracking-wide group-hover:text-[#3bbbfc] transition-colors duration-300 leading-tight">
                                             {item.label}
                                         </small>
@@ -105,7 +94,6 @@ export default function AboutUs() {
                             <div className="about-bars w-full md:max-w-120 space-y-8 md:space-y-10 mt-10 md:mt-12">
                                 {skillData.map((skill, index) => (
                                     <div key={index} className="group">
-                                        {/* Label and Percentage */}
                                         <div className="flex justify-between items-end mb-2 md:mb-3">
                                             <span className="text-sm md:text-[17px] text-white/90 font-medium tracking-wide transition-colors duration-300 group-hover:text-[#3bbbfc]">
                                                 {skill.label}
@@ -114,18 +102,9 @@ export default function AboutUs() {
                                                 {skill.value}%
                                             </span>
                                         </div>
-                                        {/* Progress Track */}
                                         <div className="relative w-full h-2 md:h-2.5 bg-white/5 rounded-full overflow-hidden border border-white/10 backdrop-blur-sm">
-                                            {/* Glowing Progress Fill */}
-                                            <div
-                                                className="h-full rounded-full transition-all duration-1000 ease-out relative"
-                                                style={{
-                                                    width: `${skill.value}%`,
-                                                    background: "linear-gradient(90deg, #3bbbfc 0%, #01a8fc 100%)",
-                                                    boxShadow: "0 0 20px rgba(59, 188, 252, 0.6)"
-                                                }}
-                                            >
-                                                {/* Animated Shine Effect */}
+                                            <div className="h-full rounded-full transition-all duration-1000 ease-out relative"
+                                                style={{ width: `${skill.value}%`, background: "linear-gradient(90deg, #3bbbfc 0%, #01a8fc 100%)", boxShadow: "0 0 20px rgba(59, 188, 252, 0.6)" }}>
                                                 <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" />
                                             </div>
                                         </div>
@@ -148,7 +127,7 @@ export default function AboutUs() {
                 <div className="about-right basis-full lg:basis-[44%] mt-14 md:mt-0">
                     <div className="about-content relative">
                         <div className="about-image relative w-full h-55 md:h-86 flex flex-col justify-center items-center group overflow-hidden rounded-[10px] md:rounded-2xl">
-                            <Image src="/images/aboutimg1.webp" alt="AboutUsOurTeam" fill sizes="(max-width: 768px) 100vw, 50vw" quality={75}
+                            <Image src="/images/aboutimage1.webp" alt="AboutUsOurTeam" fill sizes="(max-width: 768px) 100vw, 50vw" quality={75}
                             className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:rotate-1" />
                             <div className="image-overlay absolute top-0 right-0 w-full h-full"
                             style={{ backgroundImage: "linear-gradient(-125deg, rgba(59, 188, 252, 0.600), transparent)", transition: "all 0.5s ease" }} />
@@ -168,24 +147,19 @@ export default function AboutUs() {
                             <div className="absolute -inset-full w-[200%] h-full bg-linear-to-r from-transparent via-white/20 to-transparent skew-x-[-30deg] transition-all duration-1000 group-hover:left-full -left-full"></div>
                             <div className="absolute -bottom-4 w-full h-1/2 bg-white/20 blur-xl opacity-50"></div>
                         </div>
-                        {/* Bottom Images Grid with Enhanced Effects */}
                         <div className="images-box relative flex flex-wrap justify-between items-start md:items-center mt-1.5 md:mt-2.5">
-                            {/* Left Image */}
                             <div className="about-image basis-[49%] h-40 md:h-60 relative group/img overflow-hidden rounded-[10px] md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
-                                <Image src="/images/aboutimg2.webp" alt="AboutUsOurVision" fill sizes="(max-width: 768px) 100vw, 50vw" quality={75} priority={false}
+                                <Image src="/images/aboutimage2.webp" alt="AboutUsOurVision" fill sizes="(max-width: 768px) 100vw, 50vw" quality={75} priority={false}
                                 className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:rotate-1" />
                                 <div className="image-overlay absolute bottom-0 left-0 w-full h-full transition-opacity duration-500 group-hover/img:opacity-80"
                                 style={{ backgroundImage: "linear-gradient(125deg, rgba(59, 188, 252, 0.600), transparent)" }} />
-                                {/* Corner Accent */}
                                 <div className="absolute bottom-0 left-0 w-16 h-16 bg-linear-to-tr from-[#3bbbfc]/80 to-transparent rounded-tl-2xl opacity-0 group-hover/img:opacity-100 transition-opacity duration-500" />
                             </div>
-                            {/* Right Image */}
                             <div className="about-image basis-[49%] h-40 md:h-60 relative group/img overflow-hidden rounded-[10px] md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
-                                <Image src="/images/aboutimg3.webp" alt="AboutUsOurVision" fill sizes="(max-width: 768px) 100vw, 50vw" quality={75} priority={false} 
+                                <Image src="/images/aboutimage3.webp" alt="AboutUsOurVision" fill sizes="(max-width: 768px) 100vw, 50vw" quality={75} priority={false} 
                                 className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:-rotate-1" />
                                 <div className="image-overlay absolute top-0 right-0 w-full h-full transition-opacity duration-500 group-hover/img:opacity-80"
                                 style={{ backgroundImage: "linear-gradient(-125deg, rgba(59, 188, 252, 0.600), transparent)" }} />
-                                {/* Corner Accent */}
                                 <div className="absolute top-0 right-0 w-16 h-16 bg-linear-to-bl from-[#3bbbfc]/80 to-transparent rounded-br-2xl opacity-0 group-hover/img:opacity-100 transition-opacity duration-500" />
                             </div>
                         </div>
