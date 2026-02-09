@@ -149,13 +149,12 @@ export default function AboutUs() {
                     <div className="about-content relative">
                         <div className="about-image relative w-full h-55 md:h-86 flex flex-col justify-center items-center group overflow-hidden rounded-[10px] md:rounded-2xl">
                             <Image
-                                src="/images/aboutimg1.png"
-                                alt="AboutUsOurTeam"
+                                src="/images/aboutimg1.webp"
+                                alt="AboutUsTeam"
                                 fill
-                                sizes="50vw"
-                                quality={75}
-                                priority={false}
-                                className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:rotate-1"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                quality={60}
+                                className="object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:rotate-1"
                             />
                             <div
                                 className="image-overlay absolute top-0 right-0 w-full h-full"
@@ -185,11 +184,11 @@ export default function AboutUs() {
                             {/* Left Image */}
                             <div className="about-image basis-[49%] h-40 md:h-60 relative group/img overflow-hidden rounded-[10px] md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
                                 <Image
-                                    src="/images/aboutimg1.webp"
+                                    src="/images/aboutimg2.webp"
                                     alt="AboutUsOurVision"
                                     fill
-                                    sizes="50vw"
-                                    quality={75}
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    quality={60}
                                     priority={false}
                                     className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:rotate-1"
                                 />
@@ -203,11 +202,11 @@ export default function AboutUs() {
                             {/* Right Image */}
                             <div className="about-image basis-[49%] h-40 md:h-60 relative group/img overflow-hidden rounded-[10px] md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
                                 <Image
-                                    src="/images/aboutimg2.jpg"
+                                    src="/images/aboutimg3.webp"
                                     alt="AboutUsOurVision"
                                     fill
-                                    sizes="50vw" 
-                                    quality={75}
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    quality={60}
                                     priority={false}
                                     className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:-rotate-1"
                                 />
