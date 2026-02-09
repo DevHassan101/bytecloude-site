@@ -122,9 +122,9 @@ export default function Footer() {
                         {/* Company Info */}
                         <div className="space-y-0 md:space-y-6">
                             <div className="flex items-start">
-                                <h3 className="text-[26px] md:text-3xl font-bold tracking-tight leading-tight text-white">
+                                <span className="text-[25px] md:text-3xl font-bold tracking-tight leading-tight text-white">
                                     Byte<span className="text-[#5cc9ff]">Cloude</span><span className="text-white">.</span>
-                                </h3>
+                                </span>
                             </div>
                             <p className="text-sm md:text-base text-white/80 leading-relaxed text-justify tracking-tight pt-5 md:pt-0">
                                 We create powerful AI solutions that drive results. Backed by innovation, built for performance, we are here to elevate your digital presence.

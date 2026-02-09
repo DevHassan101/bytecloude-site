@@ -113,8 +113,8 @@ export default function Navbar() {
                                     {!item.dropdown ? (
                                         <Link
                                             href={item.path}
-                                            className={`text-[15px] tracking-wide transition-all duration-700 ease-in-out uppercase ${scrolled ? "text-white hover:text-[#49bdf7]" : "hover:text-blue-600"}`}
-                                            style={!scrolled ? { color: "#3bbbfc" } : {}}
+                                            className={`text-[15px] tracking-wider font-medium transition-all duration-700 ease-in-out uppercase ${scrolled ? "text-white hover:text-[#49bdf7]" : "hover:text-blue-600"}`}
+                                            style={!scrolled ? { color: "#0066cc" } : {}} 
                                             aria-label={item.ariaLabel}
                                         >
                                             {item.name}
@@ -122,8 +122,8 @@ export default function Navbar() {
                                     ) : (
                                         <div className="relative h-full flex items-center">
                                             <span
-                                                className={`cursor-pointer flex items-center text-[15px] tracking-wide transition-all duration-700 ease-in-out uppercase ${scrolled ? "text-white hover:text-[#5cc9ff]" : ""}`}
-                                                style={!scrolled ? { color: "#3bbbfc" } : {}}
+                                                className={`cursor-pointer flex items-center text-[15px] tracking-wider font-medium transition-all duration-700 ease-in-out uppercase ${scrolled ? "text-white hover:text-[#5cc9ff]" : ""}`}
+                                                style={!scrolled ? { color: "#0066cc" } : {}}
                                                 aria-label={item.ariaLabel}
                                                 role="button"
                                                 tabIndex={0}
@@ -143,8 +143,8 @@ export default function Navbar() {
                                                         <li key={sub.name} role="none">
                                                             <Link
                                                                 href={sub.path}
-                                                                className={`block px-4 py-3 rounded-md uppercase text-[15px] tracking-wide transition-all duration-700 ease-in-out ${scrolled ? "text-white hover:bg-white/10 hover:text-[#5cc9ff]" : "hover:bg-blue-50 hover:text-blue-600"}`}
-                                                                style={!scrolled ? { color: "#3bbbfc" } : {}}
+                                                                className={`block px-4 py-3 rounded-md uppercase text-[15px] tracking-wider font-medium transition-all duration-700 ease-in-out ${scrolled ? "text-white hover:bg-white/10 hover:text-[#5cc9ff]" : "hover:bg-blue-50 hover:text-blue-600"}`}
+                                                                style={!scrolled ? { color: "#0066cc" } : {}}
                                                                 aria-label={sub.ariaLabel}
                                                                 role="menuitem"
                                                             >

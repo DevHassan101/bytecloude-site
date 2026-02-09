@@ -143,7 +143,7 @@ export default function AboutFaqs() {
                                             <div className={`transition-all duration-500 ease-in-out overflow-hidden
                                                 ${isOpen ? 'max-h-125 opacity-100' : 'max-h-0 opacity-0'}`}>
                                                 <div className="px-6 md:px-6 pb-8 pt-2">
-                                                    <div className="w-full h-0.25 md:h-0.5 bg-linear-to-r from-[#3bbbfc] to-[#01a8fc] opacity-60 mb-5 rounded-full shadow-[0_0_5px_rgba(59,188,252,0.5)]" />
+                                                    <div className="w-full h-px md:h-0.5 bg-linear-to-r from-[#3bbbfc] to-[#01a8fc] opacity-60 mb-5 rounded-full shadow-[0_0_5px_rgba(59,188,252,0.5)]" />
                                                     <p className="text-white/80 text-[13px] md:text-lg leading-relaxed max-w-full md:max-w-[95%]">
                                                         {faq.answer}
                                                     </p>

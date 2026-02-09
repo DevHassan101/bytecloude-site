@@ -2,13 +2,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from 'lucide-react';
+import { Icon } from "@iconify/react";
 
 export default function OurServices() {
 
     const services = [
         {
-            number: '01',
-            icon: '/images/services/serv1.png',
+            iconName: ({ className }) => (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className={className}>
+                    <g fill="none">
+                        <rect width="40" height="32" x="4" y="8" stroke="currentColor" strokeLinejoin="round" strokeWidth="2" rx="3" />
+                        <path stroke="currentColor" strokeWidth="2" d="M4 11a3 3 0 0 1 3-3h34a3 3 0 0 1 3 3v9H4z" />
+                        <circle r="2" fill="currentColor" transform="matrix(0 -1 -1 0 10 14)" />
+                        <circle r="2" fill="currentColor" transform="matrix(0 -1 -1 0 16 14)" />
+                    </g>
+                </svg>
+            ),
+            number: "01",
             title: 'Web Designing',
             slug: 'webDesigning',
             description: 'Crafting visually stunning and user-centric designs that capture your brand identity and engage your audience.',
@@ -20,8 +30,16 @@ export default function OurServices() {
             ]
         },
         {
-            number: '02',
-            icon: '/images/services/serv2.png',
+            iconName: ({ className }) => (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className={className}>
+                    <g fill="none" stroke="currentColor" strokeWidth="3">
+                        <path strokeLinejoin="round" d="M3 24a21 21 0 1 0 42 0a21 21 0 1 0-42 0" />
+                        <path strokeLinejoin="round" d="M15 24a9 21 0 1 1 18 0a9 21 0 1 1-18 0" />
+                        <path strokeLinecap="round" d="M4.5 31h39m-39-14h39" />
+                    </g>
+                </svg>
+            ),
+            number: "02",
             title: 'Web Development',
             slug: 'webDevelopment',
             description: 'Building high-performance, scalable websites using the latest web technologies and best coding practices.',
@@ -33,8 +51,17 @@ export default function OurServices() {
             ]
         },
         {
-            number: '03',
-            icon: '/images/services/serv3.png',
+            iconName: ({ className }) => (
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className={className}
+                >
+                    <path fill="currentColor" stroke="currentColor" strokeWidth="0.5"
+                        d="M7 21V3zm5.039-14.692q.328 0 .548-.22t.22-.55t-.22-.549t-.549-.22t-.549.22t-.22.55t.22.548t.55.22M7.615 22q-.672 0-1.144-.472T6 20.385V3.615q0-.69.463-1.152T7.616 2h8.846q.67 0 1.143.472q.472.472.472 1.144V6.83q.373.04.648.31q.275.269.275.648v1.769q0 .379-.275.648t-.648.31v2.118q0 .214-.143.357t-.357.143t-.357-.143t-.143-.357V3.616q0-.27-.173-.443T16.462 3H7.616q-.27 0-.443.173T7 3.616v16.769q0 .269.173.442t.443.173h1.961q.214 0 .357.143t.143.357t-.143.357t-.357.143zm6.248-3.5l1.84 1.84q.14.14.14.342t-.14.347q-.146.165-.357.155q-.21-.009-.356-.155l-1.964-1.964q-.242-.242-.242-.565t.242-.565l1.97-1.97q.145-.146.353-.153t.354.16q.14.145.134.353t-.153.354zm6.734 0l-1.84-1.84q-.14-.14-.14-.342t.14-.347q.146-.165.357-.155q.21.009.356.155l1.964 1.964q.242.242.242.565t-.242.566l-1.97 1.969q-.146.146-.353.153t-.354-.16q-.14-.145-.134-.353t.153-.354z"/>
+                </svg>
+            ),
+            number: "03",
             title: 'App Development',
             slug: 'appDevelopment',
             description: 'Developing intuitive mobile applications for iOS and Android that provide seamless user experiences on the go.',
@@ -46,8 +73,13 @@ export default function OurServices() {
             ]
         },
         {
-            number: '04',
-            icon: '/images/services/serv4.png',
+            iconName: ({ className }) => (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={className}>
+                    <path fill="currentColor" stroke="currentColor" stroke-width="0.4"  
+                    d="M8 3a7 7 0 0 0 0 14h1.07a7 7 0 0 1 0-2H8A5 5 0 0 1 8 5h8a5 5 0 0 1 4.9 6a7 7 0 0 1 1.426 2A7 7 0 0 0 16 3zm8 10a3 3 0 1 0 0 6a3 3 0 0 0 0-6m-5 3a5 5 0 1 1 9.172 2.757l2.535 2.536l-1.414 1.414l-2.536-2.535A5 5 0 0 1 11 16" />
+                </svg>
+            ),
+            number: "04",
             title: 'SEO Optimization',
             slug: 'seoOptimization',
             description: 'Enhancing your online visibility and search rankings through data-driven strategies and technical excellence.',
@@ -57,11 +89,20 @@ export default function OurServices() {
                 'Technical SEO Audits',
                 'Monthly Analytics Reporting'
             ]
+
         },
         {
-            number: '05',
-            icon: '/images/services/serv5.png',
-            title: 'Figma UI/UX Design',
+            iconName: ({ className }) => (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={className}>
+                    <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
+                        <path d="M6 12a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3m0 6a3 3 0 0 1 3-3h3v3a3 3 0 0 1-6 0" />
+                        <path d="M12 12a3.001 3.001 0 0 1 5.121-2.121A3.001 3.001 0 1 1 12.001 12" />
+                        <path d="M12 3h3a3 3 0 0 1 0 6h-3zM6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3" />
+                    </g>
+                </svg>
+            ),
+            number: "05",
+            title: 'UI/UX Design',
             slug: 'uiuxDesign',
             description: 'Creating high-fidelity wireframes and interactive prototypes in Figma to streamline the development process.',
             features: [
@@ -72,8 +113,13 @@ export default function OurServices() {
             ]
         },
         {
-            number: '06',
-            icon: '/images/services/serv6.png',
+            iconName: ({ className }) => (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className={className}>
+                    <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.8"
+                    d="M39 14a5 5 0 1 0 0-10a5 5 0 0 0 0 10M9 44a5 5 0 1 0 0-10a5 5 0 0 0 0 10m5-40H4v10h10zm30 30H34v10h10zM34 9H14m20 30H14m-5-5V14m30 20V14"/>
+                </svg>
+            ),
+            number: "06",
             title: 'Graphic Designing',
             slug: 'graphicDesigning',
             description: 'Producing creative visual assets ranging from logos to marketing materials that make your brand stand out.',
@@ -83,7 +129,7 @@ export default function OurServices() {
                 'Print & Digital Assets',
                 'Illustration & Typography'
             ]
-        }
+        },
     ];
 
     return (
@@ -135,9 +181,13 @@ export default function OurServices() {
                                 <div className="flex items-start justify-between mb-8">
                                     <div className="relative">
                                         <div className="relative w-15 h-15 md:w-18 md:h-18 rounded-[10px] md:rounded-xl flex items-center justify-center 
-                                        transition-all duration-500 group-hover:scale-105"
+                                         transition-all duration-500 group-hover:scale-105"
                                             style={{ background: 'linear-gradient(135deg, #3bbbfc 0%, #0188fc 100%)' }}>
-                                            <img src={service.icon} alt={service.title} className="w-8 h-8 md:w-10 md:h-10" />
+                                            {typeof service.iconName === 'string' ? (
+                                                <Icon icon={service.iconName} className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                                            ) : (
+                                                <service.iconName className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                                            )}
                                         </div>
                                     </div>
 

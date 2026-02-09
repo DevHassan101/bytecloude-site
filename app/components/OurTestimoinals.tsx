@@ -85,7 +85,7 @@ export default function OurTestimonials() {
                                     </div>
                                     <div className="absolute bottom-10 left-8 z-20">
                                         <div className="flex flex-col gap-1">
-                                            <h5 className="text-white font-black text-xl md:text-2xl tracking-tighter uppercase italic opacity-90">Our Achievements</h5>
+                                            <span className="text-white font-black text-xl md:text-2xl tracking-tighter uppercase italic opacity-90">Our Achievements</span>
                                             <div className="w-18 h-0.75 md:h-1 bg-[#3bbbfc] rounded-full group-hover:w-28 transition-all duration-500" />
                                         </div>
                                     </div>
