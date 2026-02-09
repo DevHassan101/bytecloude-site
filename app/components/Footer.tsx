@@ -163,10 +163,10 @@ export default function Footer() {
 
                         {/* Quick Links */}
                         <div className="ml-0 md:ml-14">
-                            <h4 className="text-[19px] md:text-xl font-semibold text-white mb-8 relative inline-block">
+                            <span className="text-[19px] md:text-xl font-semibold text-white mb-8 relative inline-block">
                                 Quick Links
                                 <span className="absolute -bottom-2 left-0 w-12 h-[2.5px] md:h-0.75 bg-linear-to-r from-[#3bbbfc] to-[#0188fc] rounded-full"></span>
-                            </h4>
+                            </span>
                             <ul className="space-y-3">
                                 {['About Us', 'Our Project', 'Our Services', 'Testimonial', 'Contact Us'].map((link) => (
                                     <li key={link}>
@@ -181,10 +181,10 @@ export default function Footer() {
 
                         {/* Contact Info */}
                         <div className="ml-0 md:-ml-5">
-                            <h4 className="text-[19px] md:text-xl font-semibold text-white mb-8 relative inline-block">
+                            <span className="text-[19px] md:text-xl font-semibold text-white mb-8 relative inline-block">
                                 Contact Info
                                 <span className="absolute -bottom-2 left-0 w-12 h-[2.5px] md:h-0.75 bg-linear-to-r from-[#3bbbfc] to-[#0188fc] rounded-full"></span>
-                            </h4>
+                            </span>
                             <ul className="space-y-5">
                                 <li>
                                     <a href="tel:+923356343882" className="text-white/80 hover:text-[#5cc9ff] transition-colors duration-300 flex items-start gap-3 group">
@@ -214,11 +214,11 @@ export default function Footer() {
                         </div>
 
                         {/* Newsletter */}
-                        <div className="">
-                            <h4 className="text-[19px] md:text-xl font-semibold text-white mb-6 relative inline-block">
+                        <div>
+                            <span className="text-[19px] md:text-xl font-semibold text-white mb-6 relative inline-block">
                                 Newsletter
                                 <span className="absolute -bottom-2 left-0 w-12 h-[2.5px] md:h-0.75 bg-linear-to-r from-[#3bbbfc] to-[#0188fc] rounded-full"></span>
-                            </h4>
+                            </span>
                             <p className="text-[15px] md:text-base text-white/80 mb-4">Subscribe to get latest updates and news</p>
                             <div className="bg-[#060606] w-full flex justify-between px-1.5 md:px-2 py-1.5 items-center border border-[#3bbbfc] focus-within:border-[#3bbbfc] rounded-[10px] md:rounded-full transition-colors duration-300">
                                 <input

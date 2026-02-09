@@ -4,8 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import { motion, Variants } from "framer-motion";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 
 interface SlideData {
     id: number;
@@ -21,7 +19,6 @@ interface SlideData {
 export default function HeroBanner() {
     const [currentSlide, setCurrentSlide] = useState<number>(0);
 
-    // Three service slides data
     const slides: SlideData[] = [
         {
             id: 1,
@@ -67,10 +64,6 @@ export default function HeroBanner() {
         fade: true,
         arrows: false,
         beforeChange: (current: number, next: number) => setCurrentSlide(next),
-        // customPaging: () => (
-        //     <div className="w-3 h-3 bg-white/40 rounded-full hover:bg-white transition-all duration-300" />
-        // ),
-        // dotsClass: "slick-dots !bottom-8 !flex !justify-center !gap-3",
     };
 
     const containerVariants: Variants = {
@@ -115,7 +108,7 @@ export default function HeroBanner() {
         <>
             <section className="hero-banner">
                 {/* Background SVG Overlay */}
-                <div className="overlay-banner">
+                <div className="overlay-banner" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice"
                         style={{ width: '100%', height: '100%', opacity: 0.3 }}>
                         <defs>
@@ -141,8 +134,12 @@ export default function HeroBanner() {
                     <Slider {...sliderSettings}>
                         {slides.map((slide, index) => (
                             <div key={slide.id}>
-                                <motion.div className="hero-content w-full text-center px-5 md:px-10" variants={containerVariants}
-                                    initial="hidden" animate={currentSlide === index ? "visible" : "hidden"} key={`slide-${index}`}>
+                                <motion.div 
+                                    className="hero-content w-full text-center px-5 md:px-10" 
+                                    variants={containerVariants}
+                                    initial="hidden" 
+                                    animate={currentSlide === index ? "visible" : "hidden"} 
+                                >
                                     {/* Badge */}
                                     <motion.div className="hero-title flex flex-col items-center" variants={itemVariants}>
                                         <span className="border md:border-2 border-amber-400 px-5 py-1.25 md:px-6 md:py-2 text-[10px] md:text-sm rounded-full text-white uppercase">
@@ -151,7 +148,6 @@ export default function HeroBanner() {
                                         {/* Main Title */}
                                         <h1 className="mt-3 md:mt-6 text-[23px] md:text-4xl lg:text-5xl xl:text-[55px] font-semibold text-white">
                                             {slide.title}
-                                            {/* <br /> */}
                                             <motion.span className="ml-1 text-amber-400" variants={highlightVariants}>
                                                 {slide.highlight}
                                             </motion.span>
@@ -168,14 +164,22 @@ export default function HeroBanner() {
                                     </motion.div>
                                     {/* CTA Buttons */}
                                     <motion.div className="hero-btns mt-5 mb-5 flex flex-row gap-3 md:gap-2 justify-center items-center" variants={itemVariants}>
-                                        <motion.button className="py-2.5 px-7 md:py-4 md:px-12 btn1 dark-btn text-[11px] md:text-sm uppercase rounded-full"
+                                        <motion.button 
+                                            className="py-2.5 px-7 md:py-4 md:px-12 btn1 dark-btn text-[11px] md:text-sm uppercase rounded-full"
                                             whileHover={{ scale: 1.05 }}
-                                            whileTap={{ scale: 0.95 }}>
+                                            whileTap={{ scale: 0.95 }}
+                                            tabIndex={currentSlide === index ? 0 : -1}
+                                            aria-label={slide.primaryBtn}
+                                        >
                                             {slide.primaryBtn}
                                         </motion.button>
-                                        <motion.button className="py-2.5 px-7 md:py-4 md:px-12 btn2 light-btn text-[11px] md:text-sm uppercase rounded-full"
+                                        <motion.button 
+                                            className="py-2.5 px-7 md:py-4 md:px-12 btn2 light-btn text-[11px] md:text-sm uppercase rounded-full"
                                             whileHover={{ scale: 1.05 }}
-                                            whileTap={{ scale: 0.95 }}>
+                                            whileTap={{ scale: 0.95 }}
+                                            tabIndex={currentSlide === index ? 0 : -1}
+                                            aria-label={slide.secondaryBtn}
+                                        >
                                             {slide.secondaryBtn}
                                         </motion.button>
                                     </motion.div>
@@ -185,7 +189,7 @@ export default function HeroBanner() {
                     </Slider>
                 </div>
                 {/* Floating Icons */}
-                <div className="content-overlay">
+                <div className="content-overlay" aria-hidden="true">
                     <div className="content-icons">
                         <div className="content-left">
                             <span className="span1 -translate-y-8 translate-x-12">
