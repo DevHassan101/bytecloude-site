@@ -10,7 +10,7 @@ import Link from "next/link";
 const projects = [
   {
     id: 1,
-    image: '/images/projects/rms-thumbnail.png',
+    image: '/images/projects/rms/rms-thumbnail.png',
     category: 'Web Development',
     title: 'Smart Dine Restaurant POS',
     slug: 'smart-pos',
@@ -18,7 +18,7 @@ const projects = [
   },
   {
     id: 2,
-    image: '/images/projects/lms-thumbnail.png',
+    image: '/images/projects/lms/lms-thumbnail.png',
     category: 'Web Development',
     title: 'Elite Education Learning Hub',
     slug: 'smart-edu',
@@ -26,7 +26,7 @@ const projects = [
   },
   {
     id: 3,
-    image: '/images/projects/dms-thumbnail.png',
+    image: '/images/projects/dms/dms-thumbnail.png',
     category: 'Web Development',
     title: 'Truecare Medical Ecosystem',
     slug: 'smart-dms',
@@ -34,7 +34,7 @@ const projects = [
   },
   {
     id: 4,
-    image: '/images/projects/ecom-thumbnail.png',
+    image: '/images/projects/ecom/ecom-thumbnail.png',
     category: 'Web Development',
     title: 'ByteCloud E-Commerce Store',
     slug: 'smart-ecomm',
