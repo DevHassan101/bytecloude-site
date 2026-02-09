@@ -15,7 +15,7 @@ const OurTestimonials = dynamic(() => import('./components/OurTestimoinals'), {
 });
 
 const HeroBanner = dynamic(() => import('./components/HeroBanner'), {
-  loading: () => <div className="h-screen bg-linear-to-br from-blue-600 to-blue-800 animate-pulse"></div>,
+  loading: () => <div></div>,
   ssr: true,
 });
 
