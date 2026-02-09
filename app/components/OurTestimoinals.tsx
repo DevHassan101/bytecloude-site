@@ -159,7 +159,7 @@ export default function OurTestimonials() {
                                                     
                                                     <div className="relative z-10 flex items-center gap-3 mb-8">
                                                         <div className="relative p-px md:p-1 rounded-full border border-white/55 group-hover:border-white transition-colors">
-                                                            <img src="/images/aboutceo.jpg" alt="CEO"
+                                                            <img src="/images/aboutceo.webp" alt="CEO"
                                                                 className="w-14 h-14 md:w-16 md:h-16 rounded-full object-fit shadow-2xl border-2 border-white/30" />
                                                             <div className="absolute bottom-1 right-0.5 md:right-1 w-2.75 h-2.75 md:w-3.5 md:h-3.5 bg-green-400 border border-white rounded-full" />
                                                         </div>

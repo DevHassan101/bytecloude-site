@@ -39,7 +39,7 @@ export default function AboutUs() {
     ];
 
     return (
-        <section className="main-about-section relative pt-20 pb-8 md:py-22 px-6 md:px-28 overflow-hidden">
+        <section className="main-about-section relative pt-16 pb-10 md:py-22 px-6 md:px-28 overflow-hidden">
             {/* light1:center-glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#3bbbfc] opacity-15 blur-[120px] rounded-full"></div>
             {/* light2:top-corner-glow */}
@@ -67,10 +67,10 @@ export default function AboutUs() {
                                 </AnimatePresence>
                             </div>
                         </div>
-                        <div className="about-desc mt-5 md:mt-5">
+                        <div className="about-desc mt-3 md:mt-5">
                             <p className="text-justify tracking-tight md:tracking-normal md:text-left pr-3 md:pr-0 max-w-xl text-white/80 text-[15px] md:text-lg">Our mission is to empower startups and enterprises with innovative the solutions
                                 that boost online visibility, enhance lead generation and drive measurable growth in today's digital world.</p>
-                            <div className="about-info grid grid-cols-2 gap-y-8 gap-x-4 mt-10 md:mt-12">
+                            <div className="about-info grid grid-cols-2 gap-y-8 gap-x-4 mt-7 md:mt-12">
                                 {[
                                     { id: 2, label: "Experience Team", icon: "fluent:people-community-48-filled" },
                                     { id: 1, label: "Proven Results", icon: "mingcute:target-fill" },
@@ -78,7 +78,7 @@ export default function AboutUs() {
                                     { id: 4, label: "Award Winnings", icon: "basil:award-solid" },
                                 ].map((item) => (
                                     <div key={item.id} className="flex items-center group cursor-default">
-                                        <div className="relative flex items-center justify-center w-8.5 h-8.5 md:w-12 md:h-12 shrink-0 mr-3 md:mr-4 rounded-full bg-linear-to-br from-[#3bbbfc] to-[#01a8fc] shadow-[0_0_15px_rgba(59,188,252,0.4)] transition-all duration-300 group-hover:scale-110 group-hover:shadow-[#3bbbfc]/70 group-hover:rotate-6">
+                                        <div className="relative flex items-center justify-center w-9 h-9 md:w-12 md:h-12 shrink-0 mr-3 md:mr-4 rounded-full bg-linear-to-br from-[#3bbbfc] to-[#01a8fc] shadow-[0_0_15px_rgba(59,188,252,0.4)] transition-all duration-300 group-hover:scale-110 group-hover:shadow-[#3bbbfc]/70 group-hover:rotate-6">
                                             <div className="absolute inset-0.5 rounded-full border-t border-white/40 bg-white/5 opacity-40"></div>
                                             <div className="relative z-10 text-white drop-shadow-md">
                                                 <Icon icon={item.icon} className="w-4 h-4 md:w-5.5 md:h-5.5"/>
@@ -91,7 +91,7 @@ export default function AboutUs() {
                                     </div>
                                 ))}
                             </div>
-                            <div className="about-bars w-full md:max-w-120 space-y-8 md:space-y-10 mt-10 md:mt-12">
+                            <div className="about-bars w-full md:max-w-120 space-y-8 md:space-y-10 mt-7 md:mt-12">
                                 {skillData.map((skill, index) => (
                                     <div key={index} className="group">
                                         <div className="flex justify-between items-end mb-2 md:mb-3">
@@ -111,7 +111,7 @@ export default function AboutUs() {
                                     </div>
                                 ))}
                             </div>
-                            <div className="about-btn mt-10 md:mt-14">
+                            <div className="about-btn mt-9 md:mt-14">
                                 <div className="flex justify-start items-center">
                                     <button className="group/btn relative flex items-center gap-3 bg-linear-to-br from-[#3bbbfc] to-[#01a8fc] p-1 pr-5 md:pr-10 rounded-full transition-all duration-500 shadow-[0_10px_20px_rgba(1,168,252,0.3)] hover:shadow-[0_0_30px_rgba(59,187,252,0.6),0_0_60px_rgba(59,187,252,0.3)] active:scale-95 hover:bg-position-[100%_0] animate-gradient-slow">
                                         <div className="bg-white w-8.75 h-8.75 md:w-12 md:h-12 rounded-full flex justify-center items-center transition-all duration-300 group-hover/btn:-rotate-45 group-hover/btn:scale-110 shadow-sm">
@@ -124,15 +124,15 @@ export default function AboutUs() {
                         </div>
                     </div>
                 </div>
-                <div className="about-right basis-full lg:basis-[44%] mt-14 md:mt-0">
+                <div className="about-right basis-full lg:basis-[44%] mt-10 md:mt-0">
                     <div className="about-content relative">
-                        <div className="about-image relative w-full h-55 md:h-86 flex flex-col justify-center items-center group overflow-hidden rounded-[10px] md:rounded-2xl">
+                        <div className="about-image relative w-full h-50 md:h-86 flex flex-col justify-center items-center group overflow-hidden rounded-[10px] md:rounded-2xl">
                             <Image src="/images/aboutimage1.webp" alt="AboutUsOurTeam" fill sizes="(max-width: 768px) 100vw, 50vw" quality={75}
                             className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:rotate-1" />
                             <div className="image-overlay absolute top-0 right-0 w-full h-full"
                             style={{ backgroundImage: "linear-gradient(-125deg, rgba(59, 188, 252, 0.600), transparent)", transition: "all 0.5s ease" }} />
                         </div>
-                        <div className="absolute top-45 md:-top-5 right-30 md:-left-10 w-20 h-20 md:w-30 md:h-30 rounded-xl md:rounded-3xl bg-linear-to-br from-[#3bbbfc] via-[#01a8fc] to-[#0086cc] flex flex-col justify-center items-center z-20 border border-white/40 backdrop-blur-md cursor-pointer transition-all duration-500 hover:scale-110 group shadow-2xl overflow-hidden"
+                        <div className="absolute top-40 md:-top-5 right-30 md:-left-10 w-20 h-20 md:w-30 md:h-30 rounded-xl md:rounded-3xl bg-linear-to-br from-[#3bbbfc] via-[#01a8fc] to-[#0086cc] flex flex-col justify-center items-center z-20 border border-white/40 backdrop-blur-md cursor-pointer transition-all duration-500 hover:scale-110 group shadow-2xl overflow-hidden"
                             style={{ boxShadow: "0 20px 40px -10px rgba(1, 168, 252, 0.5)" }}>
                             <div className="absolute inset-0.5 rounded-xl md:rounded-3xl border-t border-white/50 bg-linear-to-b from-white/10 to-transparent pointer-events-none"></div>
                             <div className="relative z-10 flex flex-col items-center">
