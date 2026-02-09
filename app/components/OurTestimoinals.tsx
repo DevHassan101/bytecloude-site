@@ -72,7 +72,7 @@ export default function OurTestimonials() {
                                     style={{ background: `linear-gradient(145deg, #3bbbfc 0%, #0188fc 100%)` }} />
                                 <div className="relative bg-white rounded-[22px] md:rounded-[2.3rem] rounded-br-[68px] md:rounded-br-[100px] overflow-hidden h-full w-full">
                                     <div className="relative h-140 md:h-125 lg:h-150 overflow-hidden rounded-br-[68px] md:rounded-br-[100px]">
-                                        <Image src="/images/testiimage.webp" alt="Team collaboration" fill sizes="(max-width: 768px) 100vw, 50vw" quality={55} priority={false}
+                                        <Image src="/images/testiimage.webp" alt="Team collaboration" fill sizes="(max-width: 768px) 100vw, 50vw" quality={75} priority={false}
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                                         <div className="absolute w-full right-0 h-50 bottom-0 bg-linear-to-t from-[#3bbcfcd6] to-transparent"></div>
                                         <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-black/20" />

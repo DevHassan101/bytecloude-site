@@ -3,10 +3,7 @@
 import Image from "next/image";
 import { motion, useMotionValue, useTransform, animate, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import dynamic from 'next/dynamic';
-const Icon = dynamic(() => import('@iconify/react').then(mod => mod.Icon), {
-  ssr: false,
-});
+import { Icon } from '@iconify/react';
 
 
 export default function AboutUs() {
@@ -151,21 +148,10 @@ export default function AboutUs() {
                 <div className="about-right basis-full lg:basis-[44%] mt-14 md:mt-0">
                     <div className="about-content relative">
                         <div className="about-image relative w-full h-55 md:h-86 flex flex-col justify-center items-center group overflow-hidden rounded-[10px] md:rounded-2xl">
-                            <Image
-                                src="/images/aboutimg1.webp"
-                                alt="AboutUsTeam"
-                                fill
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                quality={55}
-                                className="object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:rotate-1"
-                            />
-                            <div
-                                className="image-overlay absolute top-0 right-0 w-full h-full"
-                                style={{
-                                    backgroundImage: "linear-gradient(-125deg, rgba(59, 188, 252, 0.600), transparent)",
-                                    transition: "all 0.5s ease"
-                                }}
-                            />
+                            <Image src="/images/aboutimg1.webp" alt="AboutUsOurTeam" fill sizes="(max-width: 768px) 100vw, 50vw" quality={75}
+                            className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:rotate-1" />
+                            <div className="image-overlay absolute top-0 right-0 w-full h-full"
+                            style={{ backgroundImage: "linear-gradient(-125deg, rgba(59, 188, 252, 0.600), transparent)", transition: "all 0.5s ease" }} />
                         </div>
                         <div className="absolute top-45 md:-top-5 right-30 md:-left-10 w-20 h-20 md:w-30 md:h-30 rounded-xl md:rounded-3xl bg-linear-to-br from-[#3bbbfc] via-[#01a8fc] to-[#0086cc] flex flex-col justify-center items-center z-20 border border-white/40 backdrop-blur-md cursor-pointer transition-all duration-500 hover:scale-110 group shadow-2xl overflow-hidden"
                             style={{ boxShadow: "0 20px 40px -10px rgba(1, 168, 252, 0.5)" }}>
@@ -186,37 +172,19 @@ export default function AboutUs() {
                         <div className="images-box relative flex flex-wrap justify-between items-start md:items-center mt-1.5 md:mt-2.5">
                             {/* Left Image */}
                             <div className="about-image basis-[49%] h-40 md:h-60 relative group/img overflow-hidden rounded-[10px] md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
-                                <Image
-                                    src="/images/aboutimg2.webp"
-                                    alt="AboutUsOurVision"
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, 50vw"
-                                    quality={55}
-                                    priority={false}
-                                    className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:rotate-1"
-                                />
-                                <div
-                                    className="image-overlay absolute bottom-0 left-0 w-full h-full transition-opacity duration-500 group-hover/img:opacity-80"
-                                    style={{ backgroundImage: "linear-gradient(125deg, rgba(59, 188, 252, 0.600), transparent)" }}
-                                />
+                                <Image src="/images/aboutimg2.webp" alt="AboutUsOurVision" fill sizes="(max-width: 768px) 100vw, 50vw" quality={75} priority={false}
+                                className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:rotate-1" />
+                                <div className="image-overlay absolute bottom-0 left-0 w-full h-full transition-opacity duration-500 group-hover/img:opacity-80"
+                                style={{ backgroundImage: "linear-gradient(125deg, rgba(59, 188, 252, 0.600), transparent)" }} />
                                 {/* Corner Accent */}
                                 <div className="absolute bottom-0 left-0 w-16 h-16 bg-linear-to-tr from-[#3bbbfc]/80 to-transparent rounded-tl-2xl opacity-0 group-hover/img:opacity-100 transition-opacity duration-500" />
                             </div>
                             {/* Right Image */}
                             <div className="about-image basis-[49%] h-40 md:h-60 relative group/img overflow-hidden rounded-[10px] md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
-                                <Image
-                                    src="/images/aboutimg3.webp"
-                                    alt="AboutUsOurVision"
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, 50vw"
-                                    quality={55}
-                                    priority={false}
-                                    className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:-rotate-1"
-                                />
-                                <div
-                                    className="image-overlay absolute top-0 right-0 w-full h-full transition-opacity duration-500 group-hover/img:opacity-80"
-                                    style={{ backgroundImage: "linear-gradient(-125deg, rgba(59, 188, 252, 0.600), transparent)" }}
-                                />
+                                <Image src="/images/aboutimg3.webp" alt="AboutUsOurVision" fill sizes="(max-width: 768px) 100vw, 50vw" quality={75} priority={false} 
+                                className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:-rotate-1" />
+                                <div className="image-overlay absolute top-0 right-0 w-full h-full transition-opacity duration-500 group-hover/img:opacity-80"
+                                style={{ backgroundImage: "linear-gradient(-125deg, rgba(59, 188, 252, 0.600), transparent)" }} />
                                 {/* Corner Accent */}
                                 <div className="absolute top-0 right-0 w-16 h-16 bg-linear-to-bl from-[#3bbbfc]/80 to-transparent rounded-br-2xl opacity-0 group-hover/img:opacity-100 transition-opacity duration-500" />
                             </div>

@@ -4,10 +4,7 @@ import Image from "next/image";
 import { motion, useMotionValue, useTransform, animate, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import StatsSection from "./StatsSection";
-import dynamic from 'next/dynamic';
-const Icon = dynamic(() => import('@iconify/react').then(mod => mod.Icon), {
-  ssr: false,
-});
+import { Icon } from '@iconify/react';
 
 export default function AboutSection() {
     const texts = ["Our Expertise", "Our Passion", "Our Vision"];
@@ -74,15 +71,10 @@ export default function AboutSection() {
                     <div className="about-left basis-full lg:basis-[36%] mt-15 md:mt-0">
                         <div className="about-content relative h-full">
                             <div className="about-image relative w-full h-115 md:h-170 border-2 border-white/70 rounded-2xl md:rounded-3xl flex flex-col justify-center items-center group overflow-hidden">
-                                <Image src="/images/aboutnew1.webp" alt="AboutUs1" fill sizes="(max-width: 768px) 100vw, 50vw" quality={55} priority={false}
+                                <Image src="/images/aboutnew1.webp" alt="AboutUs1" fill sizes="(max-width: 768px) 100vw, 50vw" quality={75} priority={false}
                                 className="w-full object-cover transition-transform duration-700 group-hover:scale-105"/>
-                                <div
-                                    className="image-overlay absolute top-0 right-0 w-full h-full"
-                                    style={{
-                                        backgroundImage: "linear-gradient(-125deg, rgba(59, 187, 252, 0.600), transparent)",
-                                        transition: "all 0.5s ease"
-                                    }}
-                                />
+                                <div className="image-overlay absolute top-0 right-0 w-full h-full"
+                                style={{ backgroundImage: "linear-gradient(-125deg, rgba(59, 187, 252, 0.600), transparent)", transition: "all 0.5s ease" }} />
                             </div>
                             <div className="absolute top-75 md:-top-8 right-7 md:-right-14 w-20 h-20 md:w-30 md:h-30 rounded-xl md:rounded-3xl bg-linear-to-br from-[#3bbbfc] via-[#01a8fc] to-[#0086cc] flex flex-col justify-center items-center z-20 border border-white/40 backdrop-blur-md cursor-pointer transition-all duration-500 hover:scale-110 group shadow-2xl overflow-hidden"
                                 style={{ boxShadow: "0 20px 40px -10px rgba(1, 168, 252, 0.5)" }}>
@@ -101,12 +93,10 @@ export default function AboutSection() {
                             </div>
                             <div className="images-box w-[80%] h-48 md:h-64 absolute -bottom-15 right-13 md:-right-18 flex flex-wrap justify-between items-center mt-4 gap-1">
                                 <div className="about-image w-full h-full border-2 border-white/70 rounded-2xl relative group/img overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
-                                    <Image src="/images/aboutnew2.webp" alt="AboutUs2" fill sizes="(max-width: 768px) 100vw, 50vw" quality={55} priority={false}
+                                    <Image src="/images/aboutnew2.webp" alt="AboutUs2" fill sizes="(max-width: 768px) 100vw, 50vw" quality={75} priority={false}
                                     className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:-rotate-1" />
-                                    <div
-                                        className="image-overlay absolute top-0 right-0 w-full h-full transition-opacity duration-500 group-hover/img:opacity-80"
-                                        style={{ backgroundImage: "linear-gradient(125deg, rgba(59, 188, 252, 0.600), transparent)" }}
-                                    />
+                                    <div className="image-overlay absolute top-0 right-0 w-full h-full transition-opacity duration-500 group-hover/img:opacity-80"
+                                    style={{ backgroundImage: "linear-gradient(125deg, rgba(59, 188, 252, 0.600), transparent)", transition: "all 0.5s ease" }} />
                                 </div>
                             </div>
                         </div>
@@ -143,24 +133,13 @@ export default function AboutSection() {
                                         { id: 4, label: "Award Winnings", icon: "basil:award-solid" },
                                     ].map((item) => (
                                         <div key={item.id} className="flex items-center group cursor-default">
-                                            {/* Icon Orb with Neon Glow */}
                                             <div className="relative flex items-center justify-center w-8.5 h-8.5 md:w-12 md:h-12 shrink-0 mr-3 md:mr-4 rounded-full bg-linear-to-br from-[#3bbbfc] to-[#01a8fc] shadow-[0_0_15px_rgba(59,188,252,0.4)] transition-all duration-300 group-hover:scale-110 group-hover:shadow-[#3bbbfc]/70 group-hover:rotate-6">
-
-                                                {/* Glass reflection layer */}
                                                 <div className="absolute inset-0.5 rounded-full border-t border-white/40 bg-white/5 opacity-40"></div>
-
-                                                {/* Icon */}
                                                 <div className="relative z-10 text-white drop-shadow-md">
-                                                    <Icon
-                                                        icon={item.icon}
-                                                        className="w-4 h-4 md:w-5.5 md:h-5.5"
-                                                    />
+                                                    <Icon icon={item.icon} className="w-4 h-4 md:w-5.5 md:h-5.5" />
                                                 </div>
-
-                                                {/* Outer Glow Ring */}
                                                 <div className="absolute inset-0 rounded-full border border-white/20 scale-110 opacity-100 group-hover:opacity-100 transition-all duration-500"></div>
                                             </div>
-                                            {/* Label */}
                                             <small className="text-[12px] md:text-[16px] text-white/85 font-medium tracking-wide group-hover:text-[#3bbbfc] transition-colors duration-300 leading-tight">
                                                 {item.label}
                                             </small>
@@ -213,10 +192,7 @@ export default function AboutSection() {
                                                 <div className="absolute inset-0 p-0.5 flex items-center justify-center animate-[spin_15s_linear_infinite]">
                                                     <svg viewBox="0 0 120 120" className="w-full h-full">
                                                         <defs>
-                                                            <path
-                                                                id="textCircleNew"
-                                                                d="M 60, 60 m -45, 0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"
-                                                            />
+                                                            <path id="textCircleNew" d="M 60, 60 m -45, 0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0" />
                                                         </defs>
                                                         <text className="fill-white text-[9px] font-bold uppercase tracking-[0.2em]">
                                                             <textPath href="#textCircleNew" startOffset="0%">

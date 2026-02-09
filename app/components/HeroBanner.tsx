@@ -131,17 +131,12 @@ export default function HeroBanner() {
                     </svg>
                 </div>
                 {/* Slider Content */}
-                <div className="w-full relative z-20 mt-15.5 md:mt-0">
+                <div className="w-full relative z-20 mt-15 md:mt-0">
                     <Slider {...sliderSettings}>
                         {slides.map((slide, index) => (
                             <div key={slide.id}>
-                                <motion.div 
-                                    className="hero-content w-full text-center px-5 md:px-10" 
-                                    variants={containerVariants}
-                                    initial="hidden" 
-                                    animate={currentSlide === index ? "visible" : "hidden"} 
-                                >
-                                    {/* Badge */}
+                                <motion.div className="hero-content w-full text-center px-5 md:px-10" variants={containerVariants}
+                                    initial="hidden" animate={currentSlide === index ? "visible" : "hidden"} >
                                     <motion.div className="hero-title flex flex-col items-center" variants={itemVariants}>
                                         <span className="border md:border-2 border-amber-400 px-5 py-1.25 md:px-6 md:py-2 text-[10px] md:text-sm rounded-full text-white uppercase">
                                             {slide.badge}
@@ -164,23 +159,13 @@ export default function HeroBanner() {
                                         </p>
                                     </motion.div>
                                     {/* CTA Buttons */}
-                                    <motion.div className="hero-btns mt-5 mb-5 flex flex-row gap-3 md:gap-2 justify-center items-center" variants={itemVariants}>
-                                        <motion.button 
-                                            className="py-2.5 px-7 md:py-4 md:px-12 btn1 dark-btn text-[11px] md:text-sm uppercase rounded-full"
-                                            whileHover={{ scale: 1.05 }}
-                                            whileTap={{ scale: 0.95 }}
-                                            tabIndex={currentSlide === index ? 0 : -1}
-                                            aria-label={slide.primaryBtn}
-                                        >
+                                    <motion.div className="hero-btns mt-5  flex flex-row gap-3 md:gap-2 justify-center items-center" variants={itemVariants}>
+                                        <motion.button  className="py-2.5 px-7 md:py-4 md:px-12 btn1 dark-btn text-[11px] md:text-sm uppercase rounded-full" 
+                                           whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} tabIndex={currentSlide === index ? 0 : -1} aria-label={slide.primaryBtn}>
                                             {slide.primaryBtn}
                                         </motion.button>
-                                        <motion.button 
-                                            className="py-2.5 px-7 md:py-4 md:px-12 btn2 light-btn text-[11px] md:text-sm uppercase rounded-full"
-                                            whileHover={{ scale: 1.05 }}
-                                            whileTap={{ scale: 0.95 }}
-                                            tabIndex={currentSlide === index ? 0 : -1}
-                                            aria-label={slide.secondaryBtn}
-                                        >
+                                        <motion.button className="py-2.5 px-7 md:py-4 md:px-12 btn2 light-btn text-[11px] md:text-sm uppercase rounded-full"
+                                            whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} tabIndex={currentSlide === index ? 0 : -1} aria-label={slide.secondaryBtn}>
                                             {slide.secondaryBtn}
                                         </motion.button>
                                     </motion.div>
