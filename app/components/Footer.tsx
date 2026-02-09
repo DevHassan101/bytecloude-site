@@ -1,7 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Icon } from '@iconify/react';
+import dynamic from 'next/dynamic';
+const Icon = dynamic(() => import('@iconify/react').then(mod => mod.Icon), {
+  ssr: false,
+});
 
 
 export default function Footer() {
