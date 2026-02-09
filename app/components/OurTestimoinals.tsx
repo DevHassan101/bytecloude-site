@@ -1,6 +1,5 @@
 'use client';
 
-import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import { Star } from 'lucide-react';

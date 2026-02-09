@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import { ArrowUpRight } from 'lucide-react';
-// import { Icon } from '@iconify/react';
 import Link from "next/link";
 
 
