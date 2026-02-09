@@ -1,7 +1,6 @@
 'use client'
 
 import AboutUs from "./components/AboutUs";
-import Demo from "./components/Demo";
 import HeroBanner from "./components/HeroBanner";
 import OurPortfolio from "./components/OurPortfolio";
 import OurServices from "./components/OurServices";
@@ -17,7 +16,6 @@ export default function Home() {
       <OurServices />
       <OurPortfolio />
       <OurTestimonials />
-      {/* <Demo /> */}
     </>
   );
 }
