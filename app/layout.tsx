@@ -16,9 +16,6 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "ByteCloude",
   description: "Developed By ByteCloude",
-  other: {
-    'X-DNS-Prefetch-Control': 'on',
-  },
 };
 
 export default function RootLayout({
