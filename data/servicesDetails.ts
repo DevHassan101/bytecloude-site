@@ -48,7 +48,7 @@ export interface ServiceDetail {
 }
 
 export const servicesDetailsData: Record<string, ServiceDetail> = {
-    "web-designing": {
+    "webDesigning": {
         slug: "web-designing",
         title: "What I Provide In Web Designing?",
         shortTitle: "Web Designing & Creative Solutions",
@@ -146,7 +146,7 @@ export const servicesDetailsData: Record<string, ServiceDetail> = {
         ],
     },
 
-    "web-development": {
+    "webDevelopment": {
         slug: "web-development",
         title: "What I Provide In Web Development?",
         shortTitle: "Web Development & Consulting",
@@ -243,7 +243,7 @@ export const servicesDetailsData: Record<string, ServiceDetail> = {
         ],
     },
 
-    "app-development": {
+    "appDevelopment": {
         slug: "app-development",
         title: "What I Provide In App Development?",
         shortTitle: "Mobile App Development",
@@ -340,7 +340,7 @@ export const servicesDetailsData: Record<string, ServiceDetail> = {
         ],
     },
 
-    "seo-optimization": {
+    "seoOptimization": {
         slug: "seo-optimization",
         title: "What Startegy About SEO Optimization?",
         shortTitle: "SEO Optimization & Strategy",
@@ -437,7 +437,7 @@ export const servicesDetailsData: Record<string, ServiceDetail> = {
         ],
     },
 
-    "ui-ux-design": {
+    "uiuxDesign": {
         slug: "ui-ux-design",
         title: "What I Provide In UI/UX Design?",
         shortTitle: "UI/UX Design & Consulting",
@@ -534,7 +534,7 @@ export const servicesDetailsData: Record<string, ServiceDetail> = {
         ],
     },
 
-    "graphic-designing": {
+    "graphicDesigning": {
         slug: "graphic-designing",
         title: "What I Proivde In Graphic Designing?",
         shortTitle: "Graphic Design & Branding",

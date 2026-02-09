@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import Link from "next/link";
 import { Icon } from '@iconify/react';
 
@@ -130,18 +130,34 @@ export default function Footer() {
                                 We create powerful AI solutions that drive results. Backed by innovation, built for performance, we are here to elevate your digital presence.
                             </p>
                             <div className="flex gap-3 mt-7 md:mt-0">
-                                <a href="#" className="w-9 h-9 md:w-11 md:h-11 bg-linear-to-br from-[#3bbbfc] to-[#0188fc] rounded-full flex items-center justify-center border border-[#18a2e8] hover:scale-110 transition-transform duration-300">
-                                    <Icon icon="ri:instagram-fill" className="text-white text-md md:text-xl" />
-                                </a>
-                                <a href="#" className="w-9 h-9 md:w-11 md:h-11 bg-linear-to-br from-[#3bbbfc] to-[#0188fc] rounded-full flex items-center justify-center border border-[#18a2e8] hover:scale-110 transition-transform duration-300">
-                                    <Icon icon="mdi:facebook" className="text-white text-md md:text-xl" />
-                                </a>
-                                <a href="#" className="w-9 h-9 md:w-11 md:h-11 bg-linear-to-br from-[#3bbbfc] to-[#0188fc] rounded-full flex items-center justify-center border border-[#18a2e8] hover:scale-110 transition-transform duration-300">
-                                    <Icon icon="mdi:twitter" className="text-white text-md md:text-xl" />
-                                </a>
-                                <a href="#" className="w-9 h-9 md:w-11 md:h-11 bg-linear-to-br from-[#3bbbfc] to-[#0188fc] rounded-full flex items-center justify-center border border-[#18a2e8] hover:scale-110 transition-transform duration-300">
-                                    <Icon icon="ri:linkedin-fill" className="text-white text-md md:text-xl" />
-                                </a>
+                                <Link
+                                    href="#"
+                                    className="w-9 h-9 md:w-11 md:h-11 bg-linear-to-br from-[#3bbbfc] to-[#0188fc] rounded-full flex items-center justify-center border border-[#18a2e8] hover:scale-110 transition-transform duration-300"
+                                    aria-label="Visit our Instagram page"
+                                >
+                                    <Icon icon="ri:instagram-fill" className="text-white text-md md:text-xl" aria-hidden="true" />
+                                </Link>
+                                <Link
+                                    href="#"
+                                    className="w-9 h-9 md:w-11 md:h-11 bg-linear-to-br from-[#3bbbfc] to-[#0188fc] rounded-full flex items-center justify-center border border-[#18a2e8] hover:scale-110 transition-transform duration-300"
+                                    aria-label="Visit our Facebook page"
+                                >
+                                    <Icon icon="mdi:facebook" className="text-white text-md md:text-xl" aria-hidden="true" />
+                                </Link>
+                                <Link
+                                    href="#"
+                                    className="w-9 h-9 md:w-11 md:h-11 bg-linear-to-br from-[#3bbbfc] to-[#0188fc] rounded-full flex items-center justify-center border border-[#18a2e8] hover:scale-110 transition-transform duration-300"
+                                    aria-label="Visit our Twitter page"
+                                >
+                                    <Icon icon="mdi:twitter" className="text-white text-md md:text-xl" aria-hidden="true" />
+                                </Link>
+                                <Link
+                                    href="#"
+                                    className="w-9 h-9 md:w-11 md:h-11 bg-linear-to-br from-[#3bbbfc] to-[#0188fc] rounded-full flex items-center justify-center border border-[#18a2e8] hover:scale-110 transition-transform duration-300"
+                                    aria-label="Visit our LinkedIn page"
+                                >
+                                    <Icon icon="ri:linkedin-fill" className="text-white text-md md:text-xl" aria-hidden="true" />
+                                </Link>
                             </div>
                         </div>
 

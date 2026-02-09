@@ -186,9 +186,15 @@ export default function OurPortfolio() {
                           </p>
                         </div>
 
-                        <Link key={filterproject.id} href={`/portfolio/${filterproject.slug}`} className="shrink-0 z-100 w-11 h-11 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center 
-                          bg-linear-to-br from-[#3bbbfc] to-[#01a8fc] text-white shadow-xl hover:scale-110 transition-all duration-500">
-                          <ArrowUpRight className="w-5 h-5 md:w-7 md:h-7" />
+
+                        <Link
+                          key={filterproject.id}
+                          href={`/portfolio/${filterproject.slug}`}
+                          className="shrink-0 z-100 w-11 h-11 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center 
+                          bg-linear-to-br from-[#3bbbfc] to-[#01a8fc] text-white shadow-xl hover:scale-110 transition-all duration-500"
+                          aria-label={`View ${filterproject.category || filterproject.title} project`}
+                        >
+                          <ArrowUpRight className="w-5 h-5 md:w-7 md:h-7" aria-hidden="true" />
                         </Link>
                       </div>
 

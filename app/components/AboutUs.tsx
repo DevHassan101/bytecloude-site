@@ -152,7 +152,7 @@ export default function AboutUs() {
                                 src="/images/aboutimg1.png"
                                 alt="AboutUsOurTeam"
                                 fill
-                                sizes="50vw"  // ← Simple! Your container is always 49% ≈ 50% width
+                                sizes="50vw"
                                 quality={75}
                                 priority={false}
                                 className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:rotate-1"
@@ -188,7 +188,7 @@ export default function AboutUs() {
                                     src="/images/aboutimg1.webp"
                                     alt="AboutUsOurVision"
                                     fill
-                                    sizes="50vw"  // ← Simple! Your container is always 49% ≈ 50% width
+                                    sizes="50vw"
                                     quality={75}
                                     priority={false}
                                     className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:rotate-1"
@@ -206,7 +206,7 @@ export default function AboutUs() {
                                     src="/images/aboutimg2.jpg"
                                     alt="AboutUsOurVision"
                                     fill
-                                    sizes="50vw"  // ← Simple! Your container is always 49% ≈ 50% width
+                                    sizes="50vw" 
                                     quality={75}
                                     priority={false}
                                     className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:-rotate-1"
