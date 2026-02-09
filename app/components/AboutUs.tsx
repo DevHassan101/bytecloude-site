@@ -150,12 +150,12 @@ export default function AboutUs() {
                         <div className="about-image relative w-full h-55 md:h-86 flex flex-col justify-center items-center group overflow-hidden rounded-[10px] md:rounded-2xl">
                             <Image
                                 src="/images/aboutimg1.png"
-                                alt="About Us - Company Overview"
+                                alt="AboutUsOurTeam"
                                 fill
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                quality={75}
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
+                                quality={80}
                                 priority={false}
-                                className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                className="w-full object-cover transition-transform duration-700 group-hover/img:scale-110 group-hover/img:rotate-1"
                             />
                             <div
                                 className="image-overlay absolute top-0 right-0 w-full h-full"
@@ -186,7 +186,7 @@ export default function AboutUs() {
                             <div className="about-image basis-[49%] h-40 md:h-60 relative group/img overflow-hidden rounded-[10px] md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
                                 <Image
                                     src="/images/aboutimg1.webp"
-                                    alt="About Us - Our Team"
+                                    alt="AboutUsOurVision"
                                     fill
                                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
                                     quality={80}
@@ -204,7 +204,7 @@ export default function AboutUs() {
                             <div className="about-image basis-[49%] h-40 md:h-60 relative group/img overflow-hidden rounded-[10px] md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
                                 <Image
                                     src="/images/aboutimg2.jpg"
-                                    alt="About Us - Our Vision"
+                                    alt="AboutUsOurVision"
                                     fill
                                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
                                     quality={80}

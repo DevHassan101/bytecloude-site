@@ -9,22 +9,20 @@ const nextConfig: NextConfig = {
   // CSS optimization
   experimental: {
     optimizeCss: true,
-    // Optional: Add package import optimization for heavy packages
-    // optimizePackageImports: ['lucide-react', 'date-fns', 'lodash'],
   },
 
   // Compiler options
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
-    styledComponents: false,
+    styledComponents: false, // Agar use nahi kar rahe
   },
 
   // Production optimizations
   poweredByHeader: false,
   compress: true,
-  reactStrictMode: true, // Recommended for better error catching in development
+  // optimizeFonts: true,
 
-  // Image optimization - Your settings are already excellent!
+  // Image optimization
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
@@ -34,12 +32,11 @@ const nextConfig: NextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
-  // Headers for caching - Your settings are great!
+  // Headers for caching
   async headers() {
     return [
       {
-        // Image caching - Added jpeg, gif, ico
-        source: '/:all*(svg|jpg|jpeg|png|webp|avif|gif|ico)',
+        source: '/:all*(svg|jpg|png|webp|avif)',
         locale: false,
         headers: [
           {
@@ -49,19 +46,7 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        // Static assets caching
         source: '/_next/static/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          }
-        ],
-      },
-      {
-        // Font caching
-        source: '/:all*(woff|woff2|ttf|otf|eot)',
-        locale: false,
         headers: [
           {
             key: 'Cache-Control',
