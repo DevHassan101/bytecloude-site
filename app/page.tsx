@@ -18,7 +18,7 @@ export default function Home() {
 
   const OurTestimonials = dynamic(() => import('./components/OurPortfolio'), {
     loading: () => <div>Loading...</div>,
-    ssr: false, // Client-side only
+    ssr: true, // Client-side only
   });
   return (
     <>
