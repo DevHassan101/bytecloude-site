@@ -1,0 +1,513 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #030303;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Custom Scrollbar Styling */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 3.5px; /* Scrollbar ki motayi */
+  display: block; /* Hamesha dikhane ke liye */
+}
+
+/* Scrollbar Track (Niche wali line) */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05); 
+  border-radius: 20px;
+  margin-inline: 10px;
+}
+
+/* Scrollbar Thumb (Chalne wala part) */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #3bbcfcc0, #01a8fcdc);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for depth */
+}
+
+/* Mobile par scrollbar hamesha dikhane ke liye force behavior */
+@media (max-width: 768px) {
+  .custom-scrollbar {
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+    padding-bottom: 28px; /* Scrollbar aur buttons ke beech gap */
+  }
+}
+
+
+.dark-btn {
+  background: linear-gradient(135deg, #3bbbfc 0%, #01a8fc 100%);
+  box-shadow: 0 4px 10px rgba(59, 188, 252, 0.550), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.dark-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.dark-btn:hover::before {
+  left: 100%;
+}
+
+.dark-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px #3bbbfc, inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.light-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 10px rgba(59, 188, 252, 0.450), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.light-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.light-btn:hover::before {
+  left: 100%;
+}
+
+.light-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px #3bbbfc, inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.slick-slider {
+  height: 100%;
+}
+
+.slick-list {
+  height: 100%;
+}
+
+.slick-track {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* background-color: pink; */
+}
+
+.slick-slide>div {
+  height: 100%;
+}
+
+.slick-dots li button:before {
+  display: none;
+}
+
+.slick-dots li {
+  margin: 0 4px;
+}
+
+.slick-dots li.slick-active div {
+  background-color: white;
+  transform: scale(1.2);
+}
+
+/* Smooth fade animation */
+.slick-slide {
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+  .content-left,
+  .content-right {
+    display: none;
+  }
+}
+
+.hero-banner {
+  width: 100%;
+  height: 120vh;
+  position: relative;
+  background: linear-gradient(180deg, #000000 0%, #3bbbfc 55%, #000000);
+  overflow: hidden !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.overlay-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 85%;
+  margin: auto;
+  height: 100%;
+  pointer-events: none;
+}
+
+.about-banner,
+.contact-banner,
+.portfolio-banner {
+  width: 100%;
+  height: 56vh !important;
+  position: relative;
+  background: linear-gradient(180deg, #000000 0%, #3bbbfc 55%, #000000);
+  overflow: hidden !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-overlay-banner,
+.contact-overlay-banner,
+.portfolio-overlay-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 85%;
+  margin: auto;
+  height: 100%;
+  pointer-events: none;
+}
+
+.btn-color {
+  border: 2px solid #ffb900;
+  background-color: #3bbbfc;
+  cursor: pointer;
+}
+
+.content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 71%;
+  height: 100%;
+  border-radius: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .content-overlay {
+    width: 90%;
+  }
+
+  .overlay-banner {
+    width: 100% !important;
+  }
+
+  .hero-banner {
+    height: 80vh;
+  }
+
+  .about-banner,
+  .contact-banner,
+  .portfolio-banner {
+    width: 100% !important;
+    height: 40vh !important;
+  }
+
+  .about-overlay-banner,
+  .contact-overlay-banner,
+  .portfolio-overlay-banner {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .content-overlay {
+    width: 100% !important;
+    display: none !important;
+  }
+
+  .overlay-banner {
+    width: 100% !important;
+  }
+
+  .hero-banner {
+    height: 90vh !important;
+  }
+}
+
+
+.hero-btns .btn1,
+.btn2 {
+  border: 1px solid white;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  color: white;
+  cursor: pointer;
+}
+
+.content-icons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-icons .content-left,
+.content-icons .content-right {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.content-icons .content-left span,
+.content-icons .content-right span {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 70px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3),
+    inset 0 2px 5px rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(251, 191, 36, 0.1);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.content-icons .content-left span {
+  animation: float 3s ease-in-out infinite;
+}
+
+.content-icons .content-right span {
+  animation: float 3s ease-in-out infinite;
+}
+
+.content-icons .content-left span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.content-icons .content-left span:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.content-icons .content-left span:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.content-icons .content-right span:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.content-icons .content-right span:nth-child(2) {
+  animation-delay: 1.5s;
+}
+
+.content-icons .content-right span:nth-child(3) {
+  animation-delay: 2.5s;
+}
+
+
+/* about-section-start */
+.main-about-section,
+.main-services-section,
+.our-testimonials-section,
+.main-portfolio-section,
+.main-skills-section,
+.main-faqs-section,
+.main-contact-section {
+  width: 100%;
+  background-color: black;
+}
+
+.about-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(135deg, #3bbbfc 0%, #01a8fc 100%);
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(59, 187, 252, 0.3);
+  background-color: rgb(0, 21, 255);
+  transition: transform 0.3s ease;
+}
+
+.about-icons:hover {
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+/* about-section-end */
+
+/* footer-section-start */
+
+/* footer-section-end */
+
+/* 
+@keyframes gradient-rotate {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes shimmer-diagonal {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+
+  100% {
+    transform: translate(100%, 100%);
+  }
+}
+
+@keyframes badge-shine {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes sparkle-1 {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sparkle-2 {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-shimmer-diagonal {
+  animation: shimmer-diagonal 3s ease-in-out infinite;
+}
+
+.animate-badge-shine {
+  animation: badge-shine 2s ease-in-out infinite;
+}
+
+.animate-sparkle-1 {
+  animation: sparkle-1 2s ease-in-out infinite;
+}
+
+.animate-sparkle-2 {
+  animation: sparkle-2 2s ease-in-out infinite 0.5s;
+} */
+
+/* Shine Animation for Navigation Buttons */
+
+/* @keyframes shine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 200%;
+    }
+}
+
+.animate-shine {
+    animation: shine 1.5s ease-in-out infinite;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: none !important;
+}
+
+.project-swiper {
+    padding: 4px;
+}
+
+.project-swiper .swiper-slide {
+    height: auto;
+} */
+
+/* 3. Global CSS mein add karein (globals.css ya component styles) */
+.projects-swiper .swiper-slide {
+    height: auto;
+    display: flex;
+}
+
+.projects-swiper {
+    padding-bottom: 2rem !important;
+}
+
+/* Swiper button conflicts ko fix karein */
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+    position: relative !important;
+    margin: 0 !important;
+}

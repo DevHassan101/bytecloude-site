@@ -1,0 +1,31 @@
+import type { Metadata } from "next";
+import { Outfit } from 'next/font/google';
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer"
+import "./globals.css";
+
+
+const outfit = Outfit({
+  subsets: ['latin'],
+});
+
+export const metadata: Metadata = {
+  title: "ByteCloude",
+  description: "Developed By ByteCloude",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={outfit.className} suppressHydrationWarning>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
+}
