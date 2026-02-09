@@ -12,12 +12,12 @@ const menu = [
         name: 'Services',
         path: '/services',
         dropdown: [
-            { name: 'Web Designing', path: '/services/web-designing' },
-            { name: 'Web Development', path: '/services/web-development' },
-            { name: 'App Development', path: '/services/app-development' },
-            { name: 'SEO Optimization', path: '/services/seo-optimization' },
-            { name: 'Figma UI/UX Design', path: '/services/ui-ux-design' },
-            { name: 'Graphic Designing', path: '/services/graphic-designing' },
+            { name: 'Web Designing', path: '/services/webdesigning' },
+            { name: 'Web Development', path: '/services/webdevelopment' },
+            { name: 'App Development', path: '/services/appdevelopment' },
+            { name: 'SEO Optimization', path: '/services/seooptimization' },
+            { name: 'Figma UI/UX Design', path: '/services/uiuxdesign' },
+            { name: 'Graphic Designing', path: '/services/graphicdesigning' },
         ],
     },
     { name: 'Portfolio', path: '/portfolio' },
@@ -106,7 +106,7 @@ export default function Navbar() {
                             <MoveUpRight size={18} color="white" />
                         </span>
                     </div>
-                    <button onClick={() => setOpen(!open)} className={`lg:hidden z-50 ${scrolled ? "mt-0" : "mt-5"}`}>
+                    <button aria-label="Toggle navigation menu" onClick={() => setOpen(!open)} className={`navigation-menu lg:hidden z-50 ${scrolled ? "mt-0" : "mt-5"}`}>
                         {open ? <X size={25} className="text-white" /> : <Menu size={25} className="text-white" />}
                     </button>
                 </nav>

@@ -10,7 +10,7 @@ export default function OurServices() {
             number: '01',
             icon: '/images/services/serv1.png',
             title: 'Web Designing',
-            slug: 'web-designing',
+            slug: 'webdesigning',
             description: 'Crafting visually stunning and user-centric designs that capture your brand identity and engage your audience.',
             features: [
                 'User Experience (UX) Design',
@@ -23,7 +23,7 @@ export default function OurServices() {
             number: '02',
             icon: '/images/services/serv2.png',
             title: 'Web Development',
-            slug: 'web-development',
+            slug: 'webdevelopment',
             description: 'Building high-performance, scalable websites using the latest web technologies and best coding practices.',
             features: [
                 'Responsive Web Design',
@@ -36,7 +36,7 @@ export default function OurServices() {
             number: '03',
             icon: '/images/services/serv3.png',
             title: 'App Development',
-            slug: 'app-development',
+            slug: 'appdevelopment',
             description: 'Developing intuitive mobile applications for iOS and Android that provide seamless user experiences on the go.',
             features: [
                 'iOS & Android Apps',
@@ -49,7 +49,7 @@ export default function OurServices() {
             number: '04',
             icon: '/images/services/serv4.png',
             title: 'SEO Optimization',
-            slug: 'seo-optimization',
+            slug: 'seooptimization',
             description: 'Enhancing your online visibility and search rankings through data-driven strategies and technical excellence.',
             features: [
                 'On-Page & Off-Page SEO',
@@ -62,7 +62,7 @@ export default function OurServices() {
             number: '05',
             icon: '/images/services/serv5.png',
             title: 'Figma UI/UX Design',
-            slug: 'ui-ux-design',
+            slug: 'uiuxdesign',
             description: 'Creating high-fidelity wireframes and interactive prototypes in Figma to streamline the development process.',
             features: [
                 'Component-Based Design',
@@ -75,7 +75,7 @@ export default function OurServices() {
             number: '06',
             icon: '/images/services/serv6.png',
             title: 'Graphic Designing',
-            slug: 'graphic-designing',
+            slug: 'graphicdesigning',
             description: 'Producing creative visual assets ranging from logos to marketing materials that make your brand stand out.',
             features: [
                 'Logo & Branding',

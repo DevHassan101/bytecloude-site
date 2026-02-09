@@ -113,13 +113,13 @@ export default function OurTestimonials() {
                             </div>
                             <div className="testi-content relative mt-2">
                                 <div className="w-full flex justify-end items-center mb-4 md:mb-6 gap-3 md:gap-4">
-                                    <button className="testimonial-prev group relative flex justify-center items-center w-10 md:w-12 h-10 md:h-12 rounded-full border border-white/60 overflow-hidden transition-all duration-500 shadow-[0_10px_25px_rgba(59,187,252,0.3)] cursor-pointer"
+                                    <button aria-label="Previous testimonial" className="testimonial-prev group relative flex justify-center items-center w-10 md:w-12 h-10 md:h-12 rounded-full border border-white/60 overflow-hidden transition-all duration-500 shadow-[0_10px_25px_rgba(59,187,252,0.3)] cursor-pointer"
                                         style={{ background: `linear-gradient(145deg, #3bbbfc 0%, #0188fc 100%)` }}>
                                         <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                         <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-linear-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-[shine_1.5s_ease-in-out_infinite]" />
                                         <ChevronLeft className="text-white relative z-10 group-hover:scale-110 transition-transform duration-300 w-5 h-5 md:w-6.5 md:h-6.5" />
                                     </button>
-                                    <button className="testimonial-next group relative flex justify-center items-center w-10 md:w-12 h-10 md:h-12 rounded-full border border-white/60 overflow-hidden transition-all duration-500 shadow-[0_10px_25px_rgba(59,187,252,0.3)] cursor-pointer"
+                                    <button aria-label="Next testimonial" className="testimonial-next group relative flex justify-center items-center w-10 md:w-12 h-10 md:h-12 rounded-full border border-white/60 overflow-hidden transition-all duration-500 shadow-[0_10px_25px_rgba(59,187,252,0.3)] cursor-pointer"
                                         style={{ background: `linear-gradient(145deg, #3bbbfc 0%, #0188fc 100%)` }}>
                                         <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                         <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-linear-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-[shine_1.5s_ease-in-out_infinite]" />
