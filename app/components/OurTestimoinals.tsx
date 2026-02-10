@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
-import { Star } from 'lucide-react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 // @ts-ignore
 import 'swiper/css';
 // @ts-ignore
@@ -66,14 +65,14 @@ export default function OurTestimonials() {
                 <div className="testimonial-section">
                     <div className="flex flex-col lg:flex-row items-start gap-5 lg:gap-10">
                         {/* testimonial-left-start */}
-                        <div className="testimonial-left w-full relative lg:w-[33%] group">
+                        <div className="testimonial-left w-full relative lg:w-[32%] group">
                             <div className="group relative p-0.75 rounded-3xl md:rounded-[2.4rem] cursor-pointer rounded-br-[70px] md:rounded-br-[100px] transition-all duration-700 hover:shadow-[0_0_50px_rgba(59,187,252,0.4)] overflow-hidden">
                                 <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110"
                                     style={{ background: `linear-gradient(145deg, #3bbbfc 0%, #0188fc 100%)` }} />
                                 <div className="relative bg-white rounded-[22px] md:rounded-[2.3rem] rounded-br-[68px] md:rounded-br-[100px] overflow-hidden h-full w-full">
                                     <div className="relative h-140 md:h-125 lg:h-150 overflow-hidden rounded-br-[68px] md:rounded-br-[100px]">
-                                        <Image src="/images/testiimage.webp" alt="Team collaboration" fill sizes="(max-width: 768px) 100vw, 50vw" quality={75} priority={false}
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                        <Image src="/images/testiimage.webp" alt="Team collaboration and success stories" fill
+                                            sizes="(max-width: 768px) 100vw, 33vw" quality={75} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                                         <div className="absolute w-full right-0 h-50 bottom-0 bg-linear-to-t from-[#3bbcfcd6] to-transparent"></div>
                                         <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-black/20" />
                                     </div>
@@ -95,7 +94,7 @@ export default function OurTestimonials() {
                         </div>
                         {/* testimonial-left-end */}
                         {/* testimonial-right-start */}
-                        <div className="testimonial-right w-full relative lg:w-[66%]">
+                        <div className="testimonial-right w-full relative lg:w-[67%]">
                             <div className="testi-title mt-4 md:mt-1 mb-6">
                                 <div className="inline-flex items-center gap-2 md:gap-3 text-xs md:text-sm text-white uppercase tracking-widest">
                                     <span className="w-1.75 h-1.75 md:w-2 md:h-2 bg-[#3bbbfc] rounded-full shadow-[0_0_10px_rgba(59,187,252,0.8)] animate-pulse" />
@@ -154,13 +153,14 @@ export default function OurTestimonials() {
                                                     <div className="absolute -top-10 -left-10 w-32 h-32 bg-white/10 rounded-full blur-xl pointer-events-none" />
 
                                                     <div className="absolute top-4 md:top-5 right-4.5 md:right-6 p-2.5 bg-white/20 backdrop-blur-md rounded-[10px] md:rounded-xl border border-white/30 group-hover:scale-110 transition-transform z-20">
-                                                        <img src="/images/quotes.png" alt="quotes.png" className="w-5.5 h-5.5 md:w-8 md:h-8 invert brightness-0" />
+                                                        <Image src="/images/quotes.png" alt="Quote decoration" width={32} height={32}
+                                                            loading="lazy" className="w-5.5 h-5.5 md:w-8 md:h-8 invert brightness-0" />
                                                     </div>
-                                                    
+
                                                     <div className="relative z-10 flex items-center gap-3 mb-8">
                                                         <div className="relative p-px md:p-1 rounded-full border border-white/55 group-hover:border-white transition-colors">
-                                                            <img src="/images/aboutceo.webp" alt="CEO"
-                                                                className="w-14 h-14 md:w-16 md:h-16 rounded-full object-fit shadow-2xl border-2 border-white/30" />
+                                                            <Image src="/images/aboutceo.webp" alt={`${testimonial.name} - ${testimonial.role}`} width={64} height={64} 
+                                                            loading="lazy" className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover shadow-2xl border-2 border-white/30" />
                                                             <div className="absolute bottom-1 right-0.5 md:right-1 w-2.75 h-2.75 md:w-3.5 md:h-3.5 bg-green-400 border border-white rounded-full" />
                                                         </div>
                                                         <div>

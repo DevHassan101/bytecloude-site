@@ -15,7 +15,7 @@ const OurTestimonials = dynamic(() => import('./components/OurTestimoinals'), {
 });
 
 const HeroBanner = dynamic(() => import('./components/HeroBanner'), {
-  loading: () => <div></div>,
+  loading: () => <div>Loading...</div>,
   ssr: true,
 });
 
